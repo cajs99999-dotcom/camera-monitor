@@ -1,0 +1,63 @@
+# Copy this file to mediamtx.yml and run MediaMTX from the repository root.
+# In your local copy, replace each camera's source with its own RTSP URL.
+# You can also set MTX_PATHS_CAM1_SOURCE through MTX_PATHS_CAM6_SOURCE.
+logDestinations: [stdout]
+
+rtsp: true
+rtspAddress: "127.0.0.1:8554"
+rtspTransports: [tcp]
+rtmp: false
+hls: false
+srt: false
+moq: false
+
+webrtc: true
+webrtcAddress: "127.0.0.1:8889"
+webrtcLocalUDPAddress: "127.0.0.1:8189"
+webrtcAdditionalHosts: ["127.0.0.1"]
+# For LAN access, bind both WebRTC listeners to the LAN interface and add the monitor page origin.
+webrtcAllowOrigins: ["http://127.0.0.1:8767", "http://localhost:8767"]
+
+authInternalUsers:
+  - user: any
+    permissions:
+      - action: read
+  - user: any
+    ips: ["127.0.0.1", "::1"]
+    permissions:
+      - action: publish
+
+pathDefaults:
+  rtspTransport: tcp
+
+paths:
+  cam1:
+    source: publisher
+  cam2:
+    source: publisher
+  cam3:
+    source: publisher
+  cam4:
+    source: publisher
+  cam5:
+    source: publisher
+  cam6:
+    source: publisher
+
+  cam2_browser:
+    runOnDemand: .venv-pose/Scripts/pythonw.exe tools/browser_remux.py cam2
+    runOnDemandRestart: true
+    runOnDemandStartTimeout: 30s
+  cam3_browser:
+    runOnDemand: .venv-pose/Scripts/pythonw.exe tools/browser_remux.py cam3
+    runOnDemandRestart: true
+    runOnDemandStartTimeout: 30s
+  cam4_browser:
+    runOnDemand: .venv-pose/Scripts/pythonw.exe tools/browser_remux.py cam4
+    runOnDemandRestart: true
+    runOnDemandStartTimeout: 30s
+
+  # Compatibility route for monitor tabs opened before cam6 used the raw stream.
+  cam6_browser:
+    source: rtsp://127.0.0.1:8554/cam6
+    sourceOnDemand: true

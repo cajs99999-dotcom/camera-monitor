@@ -1,0 +1,653 @@
+{
+  "schema": "rtmpose-backend-results-v1",
+  "status": "completed",
+  "backend": "ort_cuda",
+  "startedAtUtc": "2026-11-18T08:53:08.807481+00:00",
+  "modelSha256": "9acef0f3d6958bdd2427441967397ba22827f913f5b31a838e923dc0e1f3bdfd",
+  "preparedManifestSha256": "86d41ee51bab08a9decb9d0d8912a07ce5ea30c03a4f68ae8165386ba4ee035e",
+  "inputsSha256": "befcf11cde8169ebcc2ff24c5205cec367a2881da92c8778e5f9b1a1d31886de",
+  "warmup": 10,
+  "repeats": 30,
+  "scope": "Sequential cached-input host runtime; not live multi-camera FPS or identity/pose ground truth",
+  "cases": [
+    {
+      "name": "batch1",
+      "indices": [
+        0
+      ],
+      "chunks": [
+        [
+          0
+        ]
+      ],
+      "file": "batch1.npz",
+      "sha256": "ec006f2ca3713ce8ea9a50a2d88fafdc13b0e7fca5e3126621af7c73afa6eaf2",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 7.2533399999732255,
+          "p50": 7.114049999927374,
+          "p95": 9.107099999960154,
+          "p99": 10.143431999722454,
+          "max": 10.505699999612261
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 7.214546666621875,
+          "p50": 7.0719000000281085,
+          "p95": 9.069274999865227,
+          "p99": 10.101782999872741,
+          "max": 10.463499999787018
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.6703000000015891,
+          "p50": 0.6094000000302913,
+          "p95": 0.8868650000295019,
+          "p99": 1.1963299999797532,
+          "max": 1.3189999999667634
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 7.923639999974815,
+          "p50": 7.754099999829123,
+          "p95": 9.664335000070421,
+          "p99": 10.837997999760775,
+          "max": 11.250899999595276
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 3.706819999842992,
+        "p50": 3.6943000000064785,
+        "p95": 3.97605999978623,
+        "p99": 4.008571999747801,
+        "max": 4.016699999738194
+      },
+      "stateCounts": {
+        "0": 6,
+        "1": 6,
+        "2": 5
+      }
+    },
+    {
+      "name": "batch2",
+      "indices": [
+        0,
+        1
+      ],
+      "chunks": [
+        [
+          0,
+          1
+        ]
+      ],
+      "file": "batch2.npz",
+      "sha256": "1f6554842bb6f12a63bf9477110390b8ff892e0219300d75d1527eeb964e7550",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 8.235233333289216,
+          "p50": 8.203349999803322,
+          "p95": 9.44987500008665,
+          "p99": 9.511359999964952,
+          "max": 9.530499999982567
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 8.184683333365683,
+          "p50": 8.152800000061688,
+          "p95": 9.383879999813871,
+          "p99": 9.406467999888264,
+          "max": 9.415399999852525
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.7177466666841307,
+          "p50": 0.6734500000220578,
+          "p95": 0.8963199999016067,
+          "p99": 1.0566290000679148,
+          "max": 1.1088000001109322
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 8.952979999973346,
+          "p50": 8.999099999982718,
+          "p95": 10.101725000208717,
+          "p99": 10.227895999705652,
+          "max": 10.270699999637145
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 6.347180000011576,
+        "p50": 6.4629000003151305,
+        "p95": 6.6002199999275035,
+        "p99": 6.612443999947573,
+        "max": 6.61549999995259
+      },
+      "stateCounts": {
+        "0": 6,
+        "1": 16,
+        "2": 12
+      }
+    },
+    {
+      "name": "batch4",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "chunks": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "file": "batch4.npz",
+      "sha256": "71a2e6dd29f1414cc26ffe2fc581cbb8ac2336afd715983bfb812170150202f2",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 12.454169999970569,
+          "p50": 12.479499999926702,
+          "p95": 13.573309999833327,
+          "p99": 14.535906999931287,
+          "max": 14.898899999934656
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 12.38783333333231,
+          "p50": 12.417249999998603,
+          "p95": 13.510809999979756,
+          "p99": 14.472601000225042,
+          "max": 14.836000000286731
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.9786133333212396,
+          "p50": 0.9580999999343476,
+          "p95": 1.1727750000090957,
+          "p99": 1.593438000040806,
+          "max": 1.7262000001210254
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 13.432783333291809,
+          "p50": 13.424399999621528,
+          "p95": 14.583300000140298,
+          "p99": 15.437289999781571,
+          "max": 15.784999999596039
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 10.793739999917307,
+        "p50": 10.739899999862246,
+        "p95": 11.091119999946386,
+        "p99": 11.141343999952369,
+        "max": 11.153899999953865
+      },
+      "stateCounts": {
+        "0": 6,
+        "1": 33,
+        "2": 29
+      }
+    },
+    {
+      "name": "batch8",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "chunks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "file": "batch8.npz",
+      "sha256": "1e88e2dbb52c37c5656b3848c742fda16a9b8dd50c8f41ede9bfeba6eb3efba8",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 20.644043333353086,
+          "p50": 20.62865000016245,
+          "p95": 21.74603000009938,
+          "p99": 22.806987000253685,
+          "max": 23.204200000236597
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 20.54782999998679,
+          "p50": 20.536000000220156,
+          "p95": 21.65524500005631,
+          "p99": 22.7191510001785,
+          "max": 23.118800000247575
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 1.5089166666408953,
+          "p50": 1.4953999998397194,
+          "p95": 1.8348199998854395,
+          "p99": 1.9215499997881125,
+          "max": 1.9432999997661682
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 22.152959999993982,
+          "p50": 22.086050000098112,
+          "p95": 23.599824999973862,
+          "p99": 24.340901000068698,
+          "max": 24.57090000007156
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 20.202620000054594,
+        "p50": 19.788700000390236,
+        "p95": 21.802020000177436,
+        "p99": 22.107444000212126,
+        "max": 22.1838000002208
+      },
+      "stateCounts": {
+        "0": 27,
+        "1": 57,
+        "2": 52
+      }
+    },
+    {
+      "name": "batch16",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0
+      ],
+      "chunks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          0
+        ]
+      ],
+      "file": "batch16.npz",
+      "sha256": "ea431dbea61cc3ddd28077b0fe80ecc034039be551b6bb18eed4d94abb6b10ef",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 39.678113333290334,
+          "p50": 39.8734999998851,
+          "p95": 41.38991500024076,
+          "p99": 41.72630799997023,
+          "max": 41.74509999984366
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 39.51344666673625,
+          "p50": 39.654899999959525,
+          "p95": 41.238540000108515,
+          "p99": 41.57570400011991,
+          "max": 41.5938000001006
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.2813533333258724,
+          "p50": 3.2261000001199136,
+          "p95": 3.80684499984909,
+          "p99": 3.916673000130686,
+          "max": 3.941700000268611
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 42.95946666661621,
+          "p50": 43.014549999725205,
+          "p95": 44.5761099998208,
+          "p99": 45.07018800019523,
+          "max": 45.15800000035597
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 37.20121999995172,
+        "p50": 37.17839999990247,
+        "p95": 38.02537999981723,
+        "p99": 38.15387599977839,
+        "max": 38.18599999976868
+      },
+      "stateCounts": {
+        "0": 56,
+        "1": 120,
+        "2": 96
+      }
+    },
+    {
+      "name": "people15_b8",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "chunks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14
+        ]
+      ],
+      "file": "people15_b8.npz",
+      "sha256": "15e6776dbb5335e81493b607835c7cf43c5f2aa577d96f8a160932dfb8ecc7df",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 38.81582666667782,
+          "p50": 39.03949999994438,
+          "p95": 40.144134999991365,
+          "p99": 41.61019799982569,
+          "max": 42.2086999997191
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 38.65335666664578,
+          "p50": 38.87114999974983,
+          "p95": 39.99663499989765,
+          "p99": 41.44199500001832,
+          "max": 42.029100000036124
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.083676666650111,
+          "p50": 3.0605999997987965,
+          "p95": 3.4079999999676147,
+          "p99": 3.759852999996838,
+          "max": 3.90319999996791
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 41.899503333327935,
+          "p50": 42.161650000025475,
+          "p95": 43.508320000319145,
+          "p99": 45.06404899979316,
+          "max": 45.61559999956444
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 36.42629999985729,
+        "p50": 36.72909999977492,
+        "p95": 40.09251999978005,
+        "p99": 40.74674399973446,
+        "max": 40.910299999723065
+      },
+      "stateCounts": {
+        "0": 50,
+        "1": 114,
+        "2": 91
+      }
+    },
+    {
+      "name": "people17_b8",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        0,
+        1
+      ],
+      "chunks": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        [
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          0
+        ],
+        [
+          1
+        ]
+      ],
+      "file": "people17_b8.npz",
+      "sha256": "c8e725c3fb1a2b2caf7ca5da74f288c23acd79c813db81a97ac604567022fa62",
+      "timingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 46.92334999998214,
+          "p50": 46.9365999999809,
+          "p95": 48.011004999966644,
+          "p99": 48.59586099990338,
+          "max": 48.83049999989453
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 46.73562666665324,
+          "p50": 46.76344999984394,
+          "p95": 47.840304999931504,
+          "p99": 48.3965979999266,
+          "max": 48.61810000011246
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.283000000070994,
+          "p50": 3.263149999838788,
+          "p95": 3.6962850002964838,
+          "p99": 3.807225000205108,
+          "max": 3.835500000150205
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 50.206350000053135,
+          "p50": 50.292999999783206,
+          "p95": 51.44395500042265,
+          "p99": 52.196153000181766,
+          "max": 52.475800000138406
+        }
+      },
+      "repeatRawMaximumAbsoluteVariation": {
+        "simcc_x": 0.0,
+        "simcc_y": 0.0
+      },
+      "separatelyMeasuredCpuPreparationMs": {
+        "count": 5,
+        "mean": 43.88461999997162,
+        "p50": 41.724900000190246,
+        "p95": 50.248760000067705,
+        "p99": 51.660072000122454,
+        "max": 52.01290000013614
+      },
+      "stateCounts": {
+        "0": 56,
+        "1": 130,
+        "2": 103
+      }
+    }
+  ],
+  "environment": {
+    "onnxruntime": "1.32.0",
+    "torchDllProviderVersion": "2.14.1+cu130",
+    "gpu": {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "uuid": "GPU-8d095db7-4112-2c05-a69d-c42324dd3d5a",
+      "driverVersion": "617.42",
+      "computeCapability": "8.9"
+    },
+    "providers": [
+      "CUDAExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "scope": "CUDA initialized; shape/control nodes may still be placed on CPU"
+  },
+  "completedAtUtc": "2026-11-18T08:53:21.399979+00:00"
+}

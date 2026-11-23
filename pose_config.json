@@ -1,0 +1,6 @@
+{
+  "backend": "tensorrt",
+  "engine": "models/pose/rtmpose-l.fp16.b1-16.opt8.ws256.engine",
+  "acceptance": "models/pose/accepted-tensorrt.json",
+  "reuse_preparation": true
+}

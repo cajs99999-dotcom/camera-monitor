@@ -1,0 +1,1743 @@
+{
+  "createdAtUtc": "2026-11-18T08:56:26.212186+00:00",
+  "scope": "Numerical agreement against the same FP16 ONNX/ORT CUDA; not ground-truth pose accuracy",
+  "referenceManifestSha256": "19bf587af3db40713200d45a348a8cb59fd61d0d8fa2b4c905869d2d1654ddb7",
+  "candidateManifestSha256": "0f8eee7944a51347a1f8f05a437b8ceea7a312b1a8e33639cbfc38265e01b57b",
+  "criteria": {
+    "stablePixelErrorStrictlyLessThan": 2.0,
+    "stableScoreErrorAtMost": 0.02,
+    "noReliableRejectedStateFlips": true
+  },
+  "cases": [
+    {
+      "passed": true,
+      "stableReferencePoints": 5,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 9792,
+            "mean": 0.0014874815782592967,
+            "p50": 0.001220703125,
+            "p95": 0.00390625,
+            "p99": 0.005615234375,
+            "max": 0.007568359375
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 9632,
+            "mean": 0.013939178234660324,
+            "p50": 0.006654905853793025,
+            "p95": 0.04686628896743049,
+            "p99": 0.11730153985321529,
+            "max": 0.6495956778526306
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 13056,
+            "mean": 0.0013898367190039625,
+            "p50": 0.001068115234375,
+            "p95": 0.003787994384765625,
+            "p99": 0.005575680732727061,
+            "max": 0.009765625
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 12722,
+            "mean": 0.015791575934959844,
+            "p50": 0.00717769400216639,
+            "p95": 0.062344836257398055,
+            "p99": 0.14338700160384146,
+            "max": 0.6955056190490723
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 5,
+        "mean": 0.13021240234375,
+        "p50": 0.0,
+        "p95": 0.32554931640625,
+        "p99": 0.32555908203125,
+        "max": 0.3255615234375
+      },
+      "allPointPixelError": {
+        "count": 17,
+        "mean": 0.2951570433728835,
+        "p50": 0.325531005859375,
+        "p95": 0.651031494140625,
+        "p99": 0.651031494140625,
+        "max": 0.651031494140625
+      },
+      "unstablePointPixelError": {
+        "count": 12,
+        "mean": 0.36388397713502246,
+        "p50": 0.325531005859375,
+        "p95": 0.651031494140625,
+        "p99": 0.651031494140625,
+        "max": 0.651031494140625
+      },
+      "stableScoreError": {
+        "count": 5,
+        "mean": 0.00166015625,
+        "p50": 0.001708984375,
+        "p95": 0.002734375,
+        "p99": 0.002890625,
+        "max": 0.0029296875
+      },
+      "marginAbsoluteError": {
+        "count": 17,
+        "mean": 0.004358305431464139,
+        "p50": 0.0026942193508148193,
+        "p95": 0.011974394321441643,
+        "p99": 0.019057464599609372,
+        "max": 0.020828232169151306
+      },
+      "peakChangedPoints": 13,
+      "stablePeakChangedPoints": 2,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 0,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          5
+        ]
+      ],
+      "differenceExamples": [],
+      "name": "batch1",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 7.2533399999732255,
+          "p50": 7.114049999927374,
+          "p95": 9.107099999960154,
+          "p99": 10.143431999722454,
+          "max": 10.505699999612261
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 7.214546666621875,
+          "p50": 7.0719000000281085,
+          "p95": 9.069274999865227,
+          "p99": 10.101782999872741,
+          "max": 10.463499999787018
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.6703000000015891,
+          "p50": 0.6094000000302913,
+          "p95": 0.8868650000295019,
+          "p99": 1.1963299999797532,
+          "max": 1.3189999999667634
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 7.923639999974815,
+          "p50": 7.754099999829123,
+          "p95": 9.664335000070421,
+          "p99": 10.837997999760775,
+          "max": 11.250899999595276
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 3.2402233333717354,
+          "p50": 3.161050000016985,
+          "p95": 4.031310000141275,
+          "p99": 4.091332000093644,
+          "max": 4.111400000056165
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 3.1678866667031493,
+          "p50": 3.094299999929717,
+          "p95": 3.9656400000239955,
+          "p99": 4.026406000070892,
+          "max": 4.046300000027259
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 2.794770129521688,
+          "p50": 2.7431039810180664,
+          "p95": 3.583361518383026,
+          "p99": 3.6445243883132936,
+          "max": 3.652031898498535
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.5466966667124021,
+          "p50": 0.5074999999123975,
+          "p95": 0.6839800001444019,
+          "p99": 0.8391039999378338,
+          "max": 0.9006999998746323
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 3.7869200000841374,
+          "p50": 3.771650000317095,
+          "p95": 4.601810000031037,
+          "p99": 4.683312000192927,
+          "max": 4.691200000252138
+        }
+      },
+      "runtimeHostP50Speedup": 2.250533841568197,
+      "realDistinctSourcePeople": 1,
+      "repeatedCropSlots": 0
+    },
+    {
+      "passed": true,
+      "stableReferencePoints": 12,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 19584,
+            "mean": 0.0015813374977096234,
+            "p50": 0.001220703125,
+            "p95": 0.004150390625,
+            "p99": 0.006103515625,
+            "max": 0.00946044921875
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 19149,
+            "mean": 0.01567488752813786,
+            "p50": 0.0068389056250452995,
+            "p95": 0.057868787646293454,
+            "p99": 0.14922585785388967,
+            "max": 0.7930868268013
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 26112,
+            "mean": 0.0015528425825394544,
+            "p50": 0.001220703125,
+            "p95": 0.0042724609375,
+            "p99": 0.0068359375,
+            "max": 0.01251220703125
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 25433,
+            "mean": 0.016789371966808415,
+            "p50": 0.007340946234762669,
+            "p95": 0.06350065022706985,
+            "p99": 0.16717327237129215,
+            "max": 1.0640416145324707
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 12,
+        "mean": 0.27230940759181976,
+        "p50": 0.345855712890625,
+        "p95": 0.4085491091012954,
+        "p99": 0.45000611126422885,
+        "max": 0.46037036180496216
+      },
+      "allPointPixelError": {
+        "count": 34,
+        "mean": 0.6595476480091319,
+        "p50": 0.345855712890625,
+        "p95": 0.8852307379245744,
+        "p99": 8.286196984052676,
+        "max": 11.71722412109375
+      },
+      "unstablePointPixelError": {
+        "count": 22,
+        "mean": 0.870768506418575,
+        "p50": 0.345855712890625,
+        "p95": 1.2867151558399195,
+        "p99": 9.533843215703955,
+        "max": 11.71722412109375
+      },
+      "stableScoreError": {
+        "count": 12,
+        "mean": 0.0016072591145833333,
+        "p50": 0.0013427734375,
+        "p95": 0.004101562499999999,
+        "p99": 0.0045312500000000006,
+        "max": 0.004638671875
+      },
+      "marginAbsoluteError": {
+        "count": 34,
+        "mean": 0.005389381610952756,
+        "p50": 0.002971910871565342,
+        "p95": 0.022883600741624828,
+        "p99": 0.02940645113587381,
+        "max": 0.03198295831680298
+      },
+      "peakChangedPoints": 26,
+      "stablePeakChangedPoints": 9,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 0,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          16,
+          0
+        ],
+        [
+          0,
+          0,
+          12
+        ]
+      ],
+      "differenceExamples": [
+        {
+          "slot": 1,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 11.71722412109375,
+          "scoreError": 0.00146484375,
+          "refScore": 0.379150390625,
+          "refMargin": 0.00413223123177886,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        }
+      ],
+      "name": "batch2",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 8.235233333289216,
+          "p50": 8.203349999803322,
+          "p95": 9.44987500008665,
+          "p99": 9.511359999964952,
+          "max": 9.530499999982567
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 8.184683333365683,
+          "p50": 8.152800000061688,
+          "p95": 9.383879999813871,
+          "p99": 9.406467999888264,
+          "max": 9.415399999852525
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.7177466666841307,
+          "p50": 0.6734500000220578,
+          "p95": 0.8963199999016067,
+          "p99": 1.0566290000679148,
+          "max": 1.1088000001109322
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 8.952979999973346,
+          "p50": 8.999099999982718,
+          "p95": 10.101725000208717,
+          "p99": 10.227895999705652,
+          "max": 10.270699999637145
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 3.6111366666924973,
+          "p50": 3.4831499999654625,
+          "p95": 4.634865000002718,
+          "p99": 4.748434000071029,
+          "max": 4.755800000111776
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 3.4274733332798255,
+          "p50": 3.3091000000240456,
+          "p95": 4.348994999941169,
+          "p99": 4.4429400000854,
+          "max": 4.47600000006787
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 2.839626677831014,
+          "p50": 2.7296000719070435,
+          "p95": 3.689491188526153,
+          "p99": 3.757196772098541,
+          "max": 3.7714879512786865
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.7294166666421612,
+          "p50": 0.6816499999331427,
+          "p95": 0.965099999984886,
+          "p99": 1.1744229999112579,
+          "max": 1.2385999998514308
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 4.340553333334658,
+          "p50": 4.222800000206917,
+          "p95": 5.3917100000035125,
+          "p99": 5.549933999864152,
+          "max": 5.565999999816995
+        }
+      },
+      "runtimeHostP50Speedup": 2.3551526635042026,
+      "realDistinctSourcePeople": 2,
+      "repeatedCropSlots": 0
+    },
+    {
+      "passed": true,
+      "stableReferencePoints": 29,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 39168,
+            "mean": 0.0016790420666117879,
+            "p50": 0.0013427734375,
+            "p95": 0.00439453125,
+            "p99": 0.0072021484375,
+            "max": 0.0130615234375
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 38200,
+            "mean": 0.01787728291221575,
+            "p50": 0.007346563972532749,
+            "p95": 0.07096230201423159,
+            "p99": 0.17431252703070652,
+            "max": 0.7963607311248779
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 52224,
+            "mean": 0.0016363053354343363,
+            "p50": 0.001220703125,
+            "p95": 0.004638671875,
+            "p99": 0.0072021484375,
+            "max": 0.0172119140625
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 50835,
+            "mean": 0.018757072732346405,
+            "p50": 0.007660167291760445,
+            "p95": 0.07028158605098724,
+            "p99": 0.18170184820890387,
+            "max": 1.0675148963928223
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 29,
+        "mean": 0.2439940119611806,
+        "p50": 0.32550048828125,
+        "p95": 0.6334268093109131,
+        "p99": 0.6383744812011719,
+        "max": 0.6383986473083496
+      },
+      "allPointPixelError": {
+        "count": 68,
+        "mean": 0.5581874058527105,
+        "p50": 0.36614990234375,
+        "p95": 1.0092781603336334,
+        "p99": 5.94297241210936,
+        "max": 11.71722412109375
+      },
+      "unstablePointPixelError": {
+        "count": 39,
+        "mean": 0.7918183910541046,
+        "p50": 0.3662109375,
+        "p95": 1.3519747018814114,
+        "p99": 8.442275390624978,
+        "max": 11.71722412109375
+      },
+      "stableScoreError": {
+        "count": 29,
+        "mean": 0.001220703125,
+        "p50": 0.0009765625,
+        "p95": 0.0028320312499999995,
+        "p99": 0.004160156249999998,
+        "max": 0.004638671875
+      },
+      "marginAbsoluteError": {
+        "count": 68,
+        "mean": 0.004832753444241141,
+        "p50": 0.003064453136175871,
+        "p95": 0.01835652887821196,
+        "p99": 0.02679141044616698,
+        "max": 0.031862810254096985
+      },
+      "peakChangedPoints": 49,
+      "stablePeakChangedPoints": 16,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 1,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          32,
+          1
+        ],
+        [
+          0,
+          0,
+          29
+        ]
+      ],
+      "differenceExamples": [
+        {
+          "slot": 1,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 11.71722412109375,
+          "scoreError": 0.00146484375,
+          "refScore": 0.379150390625,
+          "refMargin": 0.0036157025024294853,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 8,
+          "referenceStable": false,
+          "pixelError": 0.44268798828125,
+          "scoreError": 0.000244140625,
+          "refScore": 0.685546875,
+          "refMargin": 0.027687296271324158,
+          "candidateMargin": 0.035044826567173004,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.09893798828125,
+          "scoreError": 0.00103759765625,
+          "refScore": 0.23358154296875,
+          "refMargin": 0.020351527258753777,
+          "candidateMargin": 0.015769943594932556,
+          "refState": 1,
+          "candidateState": 1
+        }
+      ],
+      "name": "batch4",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 12.454169999970569,
+          "p50": 12.479499999926702,
+          "p95": 13.573309999833327,
+          "p99": 14.535906999931287,
+          "max": 14.898899999934656
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 12.38783333333231,
+          "p50": 12.417249999998603,
+          "p95": 13.510809999979756,
+          "p99": 14.472601000225042,
+          "max": 14.836000000286731
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.9786133333212396,
+          "p50": 0.9580999999343476,
+          "p95": 1.1727750000090957,
+          "p99": 1.593438000040806,
+          "max": 1.7262000001210254
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 13.432783333291809,
+          "p50": 13.424399999621528,
+          "p95": 14.583300000140298,
+          "p99": 15.437289999781571,
+          "max": 15.784999999596039
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 6.010019999985161,
+          "p50": 6.034049999698254,
+          "p95": 6.627470000057656,
+          "p99": 7.089245000111078,
+          "max": 7.277600000179518
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 5.450246666669045,
+          "p50": 5.442650000077265,
+          "p95": 6.119305000061104,
+          "p99": 6.291612999984864,
+          "max": 6.3525999999001215
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 4.410354161262513,
+          "p50": 4.407696008682251,
+          "p95": 5.049672055244446,
+          "p99": 5.0627231740951535,
+          "max": 5.064671993255615
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 0.8902799999911318,
+          "p50": 0.8912499999951251,
+          "p95": 1.055520000159049,
+          "p99": 1.086653000129445,
+          "max": 1.0879000001295935
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 6.900299999976293,
+          "p50": 6.935549999752766,
+          "p95": 7.5001649998739595,
+          "p99": 8.117803000227468,
+          "max": 8.3612000003086
+        }
+      },
+      "runtimeHostP50Speedup": 2.0681797466959613,
+      "realDistinctSourcePeople": 4,
+      "repeatedCropSlots": 0
+    },
+    {
+      "passed": true,
+      "stableReferencePoints": 52,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 78336,
+            "mean": 0.0017036165405990057,
+            "p50": 0.0013275146484375,
+            "p95": 0.0045166015625,
+            "p99": 0.0074462890625,
+            "max": 0.018798828125
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 76163,
+            "mean": 0.01843329452220303,
+            "p50": 0.007455731742084026,
+            "p95": 0.07481751590967178,
+            "p99": 0.17687074840068817,
+            "max": 1.0070077180862427
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 104448,
+            "mean": 0.0017396888470815896,
+            "p50": 0.001220703125,
+            "p95": 0.005126953125,
+            "p99": 0.0081787109375,
+            "max": 0.02685546875
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 101168,
+            "mean": 0.02123382239637504,
+            "p50": 0.008481764234602451,
+            "p95": 0.08216219358146172,
+            "p99": 0.21000737398862845,
+            "max": 1.6913946866989136
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 52,
+        "mean": 0.22425915014285308,
+        "p50": 0.32550048828125,
+        "p95": 0.4645070925354957,
+        "p99": 0.5278700590133667,
+        "max": 0.5278700590133667
+      },
+      "allPointPixelError": {
+        "count": 136,
+        "mean": 0.4732527031618006,
+        "p50": 0.33203125,
+        "p95": 1.0194595456123352,
+        "p99": 2.8829886972904313,
+        "max": 11.71722412109375
+      },
+      "unstablePointPixelError": {
+        "count": 84,
+        "mean": 0.6273915693163872,
+        "p50": 0.3697509765625,
+        "p95": 1.33733011484146,
+        "p99": 4.931477661132826,
+        "max": 11.71722412109375
+      },
+      "stableScoreError": {
+        "count": 52,
+        "mean": 0.0016197791466346155,
+        "p50": 0.001220703125,
+        "p95": 0.004370117187499998,
+        "p99": 0.005126953125,
+        "max": 0.005126953125
+      },
+      "marginAbsoluteError": {
+        "count": 136,
+        "mean": 0.004816219143857083,
+        "p50": 0.003026649821549654,
+        "p95": 0.016672125086188316,
+        "p99": 0.027150427550077464,
+        "max": 0.03175170719623566
+      },
+      "peakChangedPoints": 99,
+      "stablePeakChangedPoints": 30,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 2,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          27,
+          0,
+          0
+        ],
+        [
+          0,
+          55,
+          2
+        ],
+        [
+          0,
+          0,
+          52
+        ]
+      ],
+      "differenceExamples": [
+        {
+          "slot": 1,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 11.71722412109375,
+          "scoreError": 0.001708984375,
+          "refScore": 0.37939453125,
+          "refMargin": 0.004130098037421703,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 8,
+          "referenceStable": false,
+          "pixelError": 0.44268798828125,
+          "scoreError": 0.000244140625,
+          "refScore": 0.685546875,
+          "refMargin": 0.02850162796676159,
+          "candidateMargin": 0.035044826567173004,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.5416259765625,
+          "scoreError": 0.00115966796875,
+          "refScore": 0.23370361328125,
+          "refMargin": 0.013901760801672935,
+          "candidateMargin": 0.015769943594932556,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 4,
+          "sourcePersonIndex": 4,
+          "joint": 6,
+          "referenceStable": false,
+          "pixelError": 0.4695630967617035,
+          "scoreError": 0.00146484375,
+          "refScore": 0.599609375,
+          "refMargin": 0.05778120085597038,
+          "candidateMargin": 0.048424288630485535,
+          "refState": 1,
+          "candidateState": 2
+        }
+      ],
+      "name": "batch8",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 20.644043333353086,
+          "p50": 20.62865000016245,
+          "p95": 21.74603000009938,
+          "p99": 22.806987000253685,
+          "max": 23.204200000236597
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 20.54782999998679,
+          "p50": 20.536000000220156,
+          "p95": 21.65524500005631,
+          "p99": 22.7191510001785,
+          "max": 23.118800000247575
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 1.5089166666408953,
+          "p50": 1.4953999998397194,
+          "p95": 1.8348199998854395,
+          "p99": 1.9215499997881125,
+          "max": 1.9432999997661682
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 22.152959999993982,
+          "p50": 22.086050000098112,
+          "p95": 23.599824999973862,
+          "p99": 24.340901000068698,
+          "max": 24.57090000007156
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 10.123156666668365,
+          "p50": 10.004850000086662,
+          "p95": 11.20246499976929,
+          "p99": 11.42457599973568,
+          "max": 11.498699999719975
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 9.004776666673328,
+          "p50": 8.91090000004624,
+          "p95": 10.072285000251213,
+          "p99": 10.36347600008412,
+          "max": 10.449200000039127
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 7.137494373321533,
+          "p50": 7.085103988647461,
+          "p95": 8.150572443008423,
+          "p99": 8.428006200790406,
+          "max": 8.52563190460205
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 1.4129700000163818,
+          "p50": 1.398650000055568,
+          "p95": 1.6454599998724004,
+          "p99": 1.6996479999443181,
+          "max": 1.7109000000345986
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 11.536126666684746,
+          "p50": 11.496499999793741,
+          "p95": 12.697369999932562,
+          "p99": 12.91708299986567,
+          "max": 12.95399999980873
+        }
+      },
+      "runtimeHostP50Speedup": 2.061864995475571,
+      "realDistinctSourcePeople": 8,
+      "repeatedCropSlots": 0
+    },
+    {
+      "passed": true,
+      "stableReferencePoints": 96,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 156672,
+            "mean": 0.0017223367619699512,
+            "p50": 0.001312255859375,
+            "p95": 0.004638671875,
+            "p99": 0.00775146484375,
+            "max": 0.020751953125
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 151922,
+            "mean": 0.01999740989868936,
+            "p50": 0.007905138656497002,
+            "p95": 0.07949772179126732,
+            "p99": 0.20432096511125625,
+            "max": 1.4706684350967407
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 208896,
+            "mean": 0.0016994932566554851,
+            "p50": 0.001220703125,
+            "p95": 0.0048828125,
+            "p99": 0.00811767578125,
+            "max": 0.026611328125
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 202279,
+            "mean": 0.02096521000981722,
+            "p50": 0.008101265877485275,
+            "p95": 0.08219271078705766,
+            "p99": 0.21061865091323853,
+            "max": 1.5774472951889038
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 96,
+        "mean": 0.20006635909279188,
+        "p50": 0.23870849609375,
+        "p95": 0.5193271338939667,
+        "p99": 0.6438047647476193,
+        "max": 0.74652099609375
+      },
+      "allPointPixelError": {
+        "count": 272,
+        "mean": 0.44842562561526017,
+        "p50": 0.33203125,
+        "p95": 1.0970330357551563,
+        "p99": 3.6771350765228368,
+        "max": 11.71722412109375
+      },
+      "unstablePointPixelError": {
+        "count": 176,
+        "mean": 0.5838943164456974,
+        "p50": 0.37109375,
+        "p95": 1.2071014046669006,
+        "p99": 4.117788553237915,
+        "max": 11.71722412109375
+      },
+      "stableScoreError": {
+        "count": 96,
+        "mean": 0.00159454345703125,
+        "p50": 0.00146484375,
+        "p95": 0.00390625,
+        "p99": 0.004907226562499999,
+        "max": 0.00537109375
+      },
+      "marginAbsoluteError": {
+        "count": 272,
+        "mean": 0.004421362276308869,
+        "p50": 0.002753429114818573,
+        "p95": 0.016299128159880633,
+        "p99": 0.025228015333414185,
+        "max": 0.0469479039311409
+      },
+      "peakChangedPoints": 194,
+      "stablePeakChangedPoints": 49,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 2,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          56,
+          0,
+          0
+        ],
+        [
+          0,
+          118,
+          2
+        ],
+        [
+          0,
+          0,
+          96
+        ]
+      ],
+      "differenceExamples": [
+        {
+          "slot": 1,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 11.71722412109375,
+          "scoreError": 0.001220703125,
+          "refScore": 0.37890625,
+          "refMargin": 0.003100775182247162,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 8,
+          "referenceStable": false,
+          "pixelError": 0.44268798828125,
+          "scoreError": 0.000732421875,
+          "refScore": 0.68505859375,
+          "refMargin": 0.02770986221730709,
+          "candidateMargin": 0.035044826567173004,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 4.008898735046387,
+          "scoreError": 0.0015869140625,
+          "refScore": 0.4918212890625,
+          "refMargin": 0.0012894906103610992,
+          "candidateMargin": 0.0026041667442768812,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.5416259765625,
+          "scoreError": 0.00115966796875,
+          "refScore": 0.23370361328125,
+          "refMargin": 0.01387604046612978,
+          "candidateMargin": 0.015769943594932556,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 4,
+          "sourcePersonIndex": 4,
+          "joint": 6,
+          "referenceStable": false,
+          "pixelError": 0.7424444556236267,
+          "scoreError": 0.001953125,
+          "refScore": 0.59912109375,
+          "refMargin": 0.04703161120414734,
+          "candidateMargin": 0.048424288630485535,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 8,
+          "sourcePersonIndex": 8,
+          "joint": 15,
+          "referenceStable": false,
+          "pixelError": 4.4444580078125,
+          "scoreError": 0.00177001953125,
+          "refScore": 0.35296630859375,
+          "refMargin": 0.002037697471678257,
+          "candidateMargin": 0.0005159958964213729,
+          "refState": 0,
+          "candidateState": 0
+        },
+        {
+          "slot": 13,
+          "sourcePersonIndex": 13,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.1900634765625,
+          "scoreError": 0.0004119873046875,
+          "refScore": 0.1272735595703125,
+          "refMargin": 0.001805054140277207,
+          "candidateMargin": 0.00482800230383873,
+          "refState": 1,
+          "candidateState": 1
+        }
+      ],
+      "name": "batch16",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 39.678113333290334,
+          "p50": 39.8734999998851,
+          "p95": 41.38991500024076,
+          "p99": 41.72630799997023,
+          "max": 41.74509999984366
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 39.51344666673625,
+          "p50": 39.654899999959525,
+          "p95": 41.238540000108515,
+          "p99": 41.57570400011991,
+          "max": 41.5938000001006
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.2813533333258724,
+          "p50": 3.2261000001199136,
+          "p95": 3.80684499984909,
+          "p99": 3.916673000130686,
+          "max": 3.941700000268611
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 42.95946666661621,
+          "p50": 43.014549999725205,
+          "p95": 44.5761099998208,
+          "p99": 45.07018800019523,
+          "max": 45.15800000035597
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 20.79526333330553,
+          "p50": 20.867850000058752,
+          "p95": 21.71729000012874,
+          "p99": 22.00187799991454,
+          "max": 22.08359999985987
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 18.547753333389966,
+          "p50": 18.39365000023463,
+          "p95": 19.400204999942616,
+          "p99": 19.53897200013671,
+          "max": 19.58920000015496
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 14.837522188822428,
+          "p50": 14.732064247131348,
+          "p95": 15.716321659088134,
+          "p99": 15.758305530548096,
+          "max": 15.7640962600708
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.095113333362557,
+          "p50": 3.025099999831582,
+          "p95": 3.52309999989302,
+          "p99": 3.6089130000073055,
+          "max": 3.632200000083685
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 23.89037666666809,
+          "p50": 23.977699999932156,
+          "p95": 24.94281500012221,
+          "p99": 25.329247000045143,
+          "max": 25.45559999998659
+        }
+      },
+      "runtimeHostP50Speedup": 1.910762249094796,
+      "realDistinctSourcePeople": 15,
+      "repeatedCropSlots": 1
+    },
+    {
+      "passed": true,
+      "stableReferencePoints": 91,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 146880,
+            "mean": 0.0017349611773015627,
+            "p50": 0.0012979507446289062,
+            "p95": 0.004730224609375,
+            "p99": 0.007843017578125,
+            "max": 0.018798828125
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 142291,
+            "mean": 0.020339287810759537,
+            "p50": 0.007987220771610737,
+            "p95": 0.08183469250798225,
+            "p99": 0.20737747848033908,
+            "max": 1.3386627435684204
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 195840,
+            "mean": 0.0017350323266940178,
+            "p50": 0.001220703125,
+            "p95": 0.005126953125,
+            "p99": 0.008381729125976456,
+            "max": 0.02685546875
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 189566,
+            "mean": 0.02155580376713798,
+            "p50": 0.008291874080896378,
+            "p95": 0.08464302495121956,
+            "p99": 0.21654742732644097,
+            "max": 1.6913946866989136
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 91,
+        "mean": 0.18998082620756968,
+        "p50": 0.0,
+        "p95": 0.4649667292833328,
+        "p99": 0.5278700590133667,
+        "max": 0.5278700590133667
+      },
+      "allPointPixelError": {
+        "count": 255,
+        "mean": 0.44280114360884126,
+        "p50": 0.33203125,
+        "p95": 1.1345342516899104,
+        "p99": 3.5240258789062504,
+        "max": 11.71722412109375
+      },
+      "unstablePointPixelError": {
+        "count": 164,
+        "mean": 0.5830855880205225,
+        "p50": 0.373291015625,
+        "p95": 1.1735014915466309,
+        "p99": 3.875673828125004,
+        "max": 11.71722412109375
+      },
+      "stableScoreError": {
+        "count": 91,
+        "mean": 0.0015453296703296703,
+        "p50": 0.001220703125,
+        "p95": 0.0040283203125,
+        "p99": 0.005126953125,
+        "max": 0.005126953125
+      },
+      "marginAbsoluteError": {
+        "count": 255,
+        "mean": 0.004445781908454556,
+        "p50": 0.0027925968170166016,
+        "p95": 0.015071365237236001,
+        "p99": 0.026280792653560675,
+        "max": 0.04944872856140137
+      },
+      "peakChangedPoints": 177,
+      "stablePeakChangedPoints": 45,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 2,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          50,
+          0,
+          0
+        ],
+        [
+          0,
+          112,
+          2
+        ],
+        [
+          0,
+          0,
+          91
+        ]
+      ],
+      "differenceExamples": [
+        {
+          "slot": 1,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 11.71722412109375,
+          "scoreError": 0.001708984375,
+          "refScore": 0.37939453125,
+          "refMargin": 0.004130098037421703,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 8,
+          "referenceStable": false,
+          "pixelError": 0.44268798828125,
+          "scoreError": 0.000244140625,
+          "refScore": 0.685546875,
+          "refMargin": 0.02850162796676159,
+          "candidateMargin": 0.035044826567173004,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.5416259765625,
+          "scoreError": 0.00115966796875,
+          "refScore": 0.23370361328125,
+          "refMargin": 0.013901760801672935,
+          "candidateMargin": 0.015769943594932556,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 4,
+          "sourcePersonIndex": 4,
+          "joint": 6,
+          "referenceStable": false,
+          "pixelError": 0.4695630967617035,
+          "scoreError": 0.00146484375,
+          "refScore": 0.599609375,
+          "refMargin": 0.05778120085597038,
+          "candidateMargin": 0.048424288630485535,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 8,
+          "sourcePersonIndex": 8,
+          "joint": 15,
+          "referenceStable": false,
+          "pixelError": 4.4444580078125,
+          "scoreError": 0.0020751953125,
+          "refScore": 0.353271484375,
+          "refMargin": 0.0025432349648326635,
+          "candidateMargin": 0.0005159958964213729,
+          "refState": 0,
+          "candidateState": 0
+        },
+        {
+          "slot": 13,
+          "sourcePersonIndex": 13,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.509033203125,
+          "scoreError": 0.000274658203125,
+          "refScore": 0.12713623046875,
+          "refMargin": 0.0006024096510373056,
+          "candidateMargin": 0.00482800230383873,
+          "refState": 1,
+          "candidateState": 1
+        }
+      ],
+      "name": "people15_b8",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 38.81582666667782,
+          "p50": 39.03949999994438,
+          "p95": 40.144134999991365,
+          "p99": 41.61019799982569,
+          "max": 42.2086999997191
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 38.65335666664578,
+          "p50": 38.87114999974983,
+          "p95": 39.99663499989765,
+          "p99": 41.44199500001832,
+          "max": 42.029100000036124
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.083676666650111,
+          "p50": 3.0605999997987965,
+          "p95": 3.4079999999676147,
+          "p99": 3.759852999996838,
+          "max": 3.90319999996791
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 41.899503333327935,
+          "p50": 42.161650000025475,
+          "p95": 43.508320000319145,
+          "p99": 45.06404899979316,
+          "max": 45.61559999956444
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 19.753626666715718,
+          "p50": 19.621600000164108,
+          "p95": 21.429635000004055,
+          "p99": 22.552359999995133,
+          "max": 22.94849999998405
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 17.382383333263835,
+          "p50": 17.362999999704698,
+          "p95": 18.875760000014452,
+          "p99": 19.853592000122262,
+          "max": 20.252400000117632
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 13.58638079961141,
+          "p50": 13.604896068572998,
+          "p95": 15.037920022010802,
+          "p99": 15.836065607070923,
+          "max": 16.116191387176514
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.0585099999977197,
+          "p50": 3.0163000001266482,
+          "p95": 3.691374999857543,
+          "p99": 3.9186349999499726,
+          "max": 3.958799999963958
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 22.81213666671344,
+          "p50": 22.70914999985507,
+          "p95": 24.896494999984498,
+          "p99": 25.74135799998203,
+          "max": 25.990699999965727
+        }
+      },
+      "runtimeHostP50Speedup": 1.9896185835822702,
+      "realDistinctSourcePeople": 15,
+      "repeatedCropSlots": 0
+    },
+    {
+      "passed": true,
+      "stableReferencePoints": 103,
+      "rawErrors": {
+        "simcc_x": {
+          "absolute": {
+            "count": 166464,
+            "mean": 0.001717240830703636,
+            "p50": 0.00128173828125,
+            "p95": 0.004638671875,
+            "p99": 0.007739734649658159,
+            "max": 0.018798828125
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 161433,
+            "mean": 0.019739410079264684,
+            "p50": 0.007778738159686327,
+            "p95": 0.07906000167131422,
+            "p99": 0.1993083339929572,
+            "max": 1.3070063591003418
+          }
+        },
+        "simcc_y": {
+          "absolute": {
+            "count": 221952,
+            "mean": 0.0017029528888511754,
+            "p50": 0.001220703125,
+            "p95": 0.00494384765625,
+            "p99": 0.008118259906768788,
+            "max": 0.02685546875
+          },
+          "relativeWhereReferenceAbsAtLeast001": {
+            "count": 214987,
+            "mean": 0.02084797738181801,
+            "p50": 0.008093070238828659,
+            "p95": 0.08178625255823135,
+            "p99": 0.20863538771867726,
+            "max": 1.6913946866989136
+          }
+        }
+      },
+      "stablePointPixelError": {
+        "count": 103,
+        "mean": 0.20469581704695247,
+        "p50": 0.25177001953125,
+        "p95": 0.46037036180496216,
+        "p99": 0.5276422476768494,
+        "max": 0.5278700590133667
+      },
+      "allPointPixelError": {
+        "count": 289,
+        "mean": 0.4744446094060852,
+        "p50": 0.33642578125,
+        "p95": 1.058231949806213,
+        "p99": 3.649965820312504,
+        "max": 12.0833740234375
+      },
+      "unstablePointPixelError": {
+        "count": 186,
+        "mean": 0.6238216288307662,
+        "p50": 0.373291015625,
+        "p95": 1.4127757549285889,
+        "p99": 5.5353729248047285,
+        "max": 12.0833740234375
+      },
+      "stableScoreError": {
+        "count": 103,
+        "mean": 0.001571507129854369,
+        "p50": 0.001220703125,
+        "p95": 0.004125976562499998,
+        "p99": 0.005117187500000002,
+        "max": 0.005126953125
+      },
+      "marginAbsoluteError": {
+        "count": 289,
+        "mean": 0.004525410669620526,
+        "p50": 0.002813262864947319,
+        "p95": 0.016114583611488334,
+        "p99": 0.02908515751361848,
+        "max": 0.04858994483947754
+      },
+      "peakChangedPoints": 204,
+      "stablePeakChangedPoints": 55,
+      "borderFlagChanges": 0,
+      "qualityStateChanges": 2,
+      "referenceReliableToRejected": 0,
+      "referenceRejectedToReliable": 0,
+      "stateConfusion": [
+        [
+          56,
+          0,
+          0
+        ],
+        [
+          0,
+          128,
+          2
+        ],
+        [
+          0,
+          0,
+          103
+        ]
+      ],
+      "differenceExamples": [
+        {
+          "slot": 1,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 11.71722412109375,
+          "scoreError": 0.001708984375,
+          "refScore": 0.37939453125,
+          "refMargin": 0.004130098037421703,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 8,
+          "referenceStable": false,
+          "pixelError": 0.44268798828125,
+          "scoreError": 0.000244140625,
+          "refScore": 0.685546875,
+          "refMargin": 0.02850162796676159,
+          "candidateMargin": 0.035044826567173004,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 2,
+          "sourcePersonIndex": 2,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.5416259765625,
+          "scoreError": 0.00115966796875,
+          "refScore": 0.23370361328125,
+          "refMargin": 0.013901760801672935,
+          "candidateMargin": 0.015769943594932556,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 4,
+          "sourcePersonIndex": 4,
+          "joint": 6,
+          "referenceStable": false,
+          "pixelError": 0.4695630967617035,
+          "scoreError": 0.00146484375,
+          "refScore": 0.599609375,
+          "refMargin": 0.05778120085597038,
+          "candidateMargin": 0.048424288630485535,
+          "refState": 1,
+          "candidateState": 2
+        },
+        {
+          "slot": 8,
+          "sourcePersonIndex": 8,
+          "joint": 15,
+          "referenceStable": false,
+          "pixelError": 4.4444580078125,
+          "scoreError": 0.0018310546875,
+          "refScore": 0.35302734375,
+          "refMargin": 0.0025458247400820255,
+          "candidateMargin": 0.0005159958964213729,
+          "refState": 0,
+          "candidateState": 0
+        },
+        {
+          "slot": 13,
+          "sourcePersonIndex": 13,
+          "joint": 16,
+          "referenceStable": false,
+          "pixelError": 3.1900634765625,
+          "scoreError": 0.000335693359375,
+          "refScore": 0.127197265625,
+          "refMargin": 0.0018072288949042559,
+          "candidateMargin": 0.00482800230383873,
+          "refState": 1,
+          "candidateState": 1
+        },
+        {
+          "slot": 16,
+          "sourcePersonIndex": 1,
+          "joint": 10,
+          "referenceStable": false,
+          "pixelError": 12.0833740234375,
+          "scoreError": 0.0008544921875,
+          "refScore": 0.3785400390625,
+          "refMargin": 0.0036213139537721872,
+          "candidateMargin": 0.0010351967066526413,
+          "refState": 1,
+          "candidateState": 1
+        }
+      ],
+      "name": "people17_b8",
+      "referenceTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 46.92334999998214,
+          "p50": 46.9365999999809,
+          "p95": 48.011004999966644,
+          "p99": 48.59586099990338,
+          "max": 48.83049999989453
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 46.73562666665324,
+          "p50": 46.76344999984394,
+          "p95": 47.840304999931504,
+          "p99": 48.3965979999266,
+          "max": 48.61810000011246
+        },
+        "gpuKernelMs": {
+          "count": 0,
+          "mean": null,
+          "p50": null,
+          "p95": null,
+          "p99": null,
+          "max": null
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.283000000070994,
+          "p50": 3.263149999838788,
+          "p95": 3.6962850002964838,
+          "p99": 3.807225000205108,
+          "max": 3.835500000150205
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 50.206350000053135,
+          "p50": 50.292999999783206,
+          "p95": 51.44395500042265,
+          "p99": 52.196153000181766,
+          "max": 52.475800000138406
+        }
+      },
+      "candidateTimingsMs": {
+        "runtimeHostWallMs": {
+          "count": 30,
+          "mean": 24.19810666662367,
+          "p50": 24.185249999845837,
+          "p95": 25.013949999811302,
+          "p99": 25.48586900000828,
+          "max": 25.675500000033935
+        },
+        "backendCallsMs": {
+          "count": 30,
+          "mean": 21.60473999996005,
+          "p50": 21.621800000048097,
+          "p95": 22.20696999977463,
+          "p99": 22.820939000202998,
+          "max": 23.009700000329758
+        },
+        "gpuKernelMs": {
+          "count": 30,
+          "mean": 17.178651750087738,
+          "p50": 17.107712030410767,
+          "p95": 17.791227316856382,
+          "p99": 18.473808372020724,
+          "max": 18.722336053848267
+        },
+        "decodeAndQualityMs": {
+          "count": 30,
+          "mean": 3.397949999998673,
+          "p50": 3.3664500001577835,
+          "p95": 3.7278600000263395,
+          "p99": 4.082754000000932,
+          "max": 4.218300000047748
+        },
+        "cachedInputPoseMs": {
+          "count": 30,
+          "mean": 27.596056666622342,
+          "p50": 27.574449999974604,
+          "p95": 28.52271999986442,
+          "p99": 28.811120000232222,
+          "max": 28.872600000340753
+        }
+      },
+      "runtimeHostP50Speedup": 1.9407117974914498,
+      "realDistinctSourcePeople": 15,
+      "repeatedCropSlots": 2
+    }
+  ],
+  "passed": true,
+  "decision": "numerical_gate_passed_speed_requires_review"
+}

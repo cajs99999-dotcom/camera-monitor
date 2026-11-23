@@ -1,0 +1,14 @@
+{
+  "name": "camera-monitor-classroom",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Local classroom model viewer for camera_monitor",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "esbuild": "0.28.2",
+    "three": "0.187.0"
+  }
+}

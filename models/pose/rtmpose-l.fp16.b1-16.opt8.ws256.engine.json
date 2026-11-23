@@ -1,0 +1,107 @@
+{
+  "schema": "rtmpose-l-tensorrt-local-v1",
+  "status": "built_unvalidated",
+  "createdAtUtc": "2026-11-18T08:55:50.749458+00:00",
+  "model": {
+    "path": "D:\\camera_monitor\\models\\pose\\rtmpose-l.fp16.onnx",
+    "sha256": "9acef0f3d6958bdd2427441967397ba22827f913f5b31a838e923dc0e1f3bdfd",
+    "bytes": 55575902,
+    "inputs": [
+      {
+        "name": "input",
+        "dtype": "FLOAT",
+        "shape": [
+          "batch",
+          3,
+          384,
+          288
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "name": "simcc_x",
+        "dtype": "FLOAT",
+        "shape": [
+          "batch",
+          "MatMulsimcc_x_dim_1",
+          576
+        ]
+      },
+      {
+        "name": "simcc_y",
+        "dtype": "FLOAT",
+        "shape": [
+          "batch",
+          "MatMulsimcc_x_dim_1",
+          768
+        ]
+      }
+    ],
+    "initializerTypes": {
+      "FLOAT16": 174,
+      "INT64": 3
+    },
+    "inputSizeWH": [
+      288,
+      384
+    ],
+    "precision": "existing_FP16_graph_float32_IO"
+  },
+  "runtimeFingerprint": {
+    "platform": "Windows",
+    "architecture": "AMD64",
+    "tensorrt": "11.4.0.106",
+    "nvinferSha256": "9f658dc8e7d485371eb56c82db96b1f4f9d883c29098c449c4033f7126e3d17f",
+    "gpu": {
+      "index": 0,
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "uuid": "GPU-8d095db7-4112-2c05-a69d-c42324dd3d5a",
+      "driverVersion": "617.42",
+      "computeCapability": "8.9"
+    }
+  },
+  "environment": {
+    "python": "D:\\anaconda3\\envs\\tensorrt\\python.exe",
+    "pythonVersion": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+    "trtModule": "D:\\anaconda3\\envs\\tensorrt\\Lib\\site-packages\\tensorrt\\__init__.py",
+    "nvinferDll": "D:\\NVIDIA\\TensorRT-11.4.0.106\\bin\\nvinfer_11.dll",
+    "networkTyping": "TensorRT11_strongly_typed",
+    "cudaContextCreatedByInspection": false
+  },
+  "buildSettings": {
+    "workspaceMiB": 256,
+    "optimizationLevel": 3,
+    "tf32": false,
+    "precisionConversion": false,
+    "profile": {
+      "input": {
+        "min": [
+          1,
+          3,
+          384,
+          288
+        ],
+        "opt": [
+          8,
+          3,
+          384,
+          288
+        ],
+        "max": [
+          16,
+          3,
+          384,
+          288
+        ]
+      }
+    }
+  },
+  "enginePath": "D:\\camera_monitor\\work\\pose-tensorrt\\rtmpose-l.fp16.b1-16.opt8.ws256.engine",
+  "engineSha256": "f990bcd7cf4791378bbfa4e47b76dcf10e770d88400ac86b216d4078c6b4bd5f",
+  "engineBytes": 59174068,
+  "buildSeconds": 95.1224317000001,
+  "builderScriptSha256": "e3c5575abf91902c6bfa46ee0b60f9d3d6cd0bdda94595f04a5dd1506bcba62b",
+  "numericalValidation": "pending_same_ONNX_ORT_CUDA_reference",
+  "workspaceNote": "Workspace limits tactic scratch; it is not a cap on total build/runtime VRAM."
+}

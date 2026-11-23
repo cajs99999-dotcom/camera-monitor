@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>教室三维模型</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root { color-scheme: dark; font: 14px/1.5 system-ui, "Microsoft YaHei", sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; }
+    body { display: grid; grid-template-rows: auto minmax(0, 1fr); color: #e7edf1; background: #171e24; }
+    header, .heading, .controls, #camera-presets { display: flex; align-items: center; }
+    header { flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding: 12px 20px; border-bottom: 1px solid #3c4951; }
+    .heading { gap: 18px; }
+    h1 { margin: 0; font-size: 18px; font-weight: 650; }
+    a { color: #a7dfd5; text-underline-offset: 3px; }
+    .controls { flex-wrap: wrap; gap: 10px 16px; }
+    #camera-presets { gap: 4px; }
+    button {
+      border: 1px solid #4b5c64;
+      border-radius: 5px;
+      padding: 4px 8px;
+      color: inherit;
+      background: #29363f;
+      font: inherit;
+      cursor: pointer;
+    }
+    button:hover, button[aria-pressed="true"] { background: #2f5254; border-color: #8acdc1; }
+    :focus-visible { outline: 2px solid #acebdd; outline-offset: 2px; }
+    #viewport { position: relative; min-width: 0; min-height: 0; overflow: hidden; background: #727e84; }
+    #scene { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+    #scene:active { cursor: grabbing; }
+    #camera-labels { position: absolute; inset: 0; pointer-events: none; }
+    .camera-label {
+      position: absolute;
+      inset: 0 auto auto 0;
+      padding: 2px 7px;
+      background: #20323b;
+      border-color: var(--camera-color, #8acdc1);
+      pointer-events: auto;
+    }
+    .camera-label[aria-pressed="true"] { border-color: #b1efca; }
+    #model-status { position: absolute; top: 12px; left: 12px; margin: 0; padding: 6px 10px; border-radius: 4px; background: #1b262e; }
+    @media (max-width: 600px) { header { padding: 10px 12px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="heading">
+      <a href="../index.html">← 返回实时预览</a>
+      <h1>教室三维模型</h1>
+    </div>
+    <div class="controls">
+      <div id="camera-presets" role="group" aria-label="固定机位视角"></div>
+    </div>
+  </header>
+  <main id="viewport" aria-label="三维教室">
+    <canvas id="scene" aria-label="拖动旋转、右键拖动平移、滚轮缩放教室模型"></canvas>
+    <div id="camera-labels" role="group" aria-label="模型内的固定机位"></div>
+    <p id="model-status" role="status">正在加载教室模型…</p>
+  </main>
+  <script>__BUNDLE__</script>
+</body>
+</html>

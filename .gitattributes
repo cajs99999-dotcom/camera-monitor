@@ -1,0 +1,7 @@
+* text=auto eol=lf
+
+/models/pose/*.pth filter=lfs diff=lfs merge=lfs -text
+/models/pose/*.onnx filter=lfs diff=lfs merge=lfs -text
+/models/pose/*.engine filter=lfs diff=lfs merge=lfs -text
+/web/classroom/assets/*.glb filter=lfs diff=lfs merge=lfs -text
+/mediamtx/mediamtx.exe filter=lfs diff=lfs merge=lfs -text
